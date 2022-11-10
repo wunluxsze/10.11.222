@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+li {
+    list-style: none;
+}
+
+/* header */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.search__btn{
+    background: #abce80;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: black;
+    padding: 14px 70px;
+}
+.btn_i{
+    background: unset;
+}
+.title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 66px;
+    color: #FFFFFF;
+}
+.title_p{
+    color: #4C3D74;
+}
+.text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+.text_p{
+    color: #4C3D74;
+}
+
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+.header{
+    padding: 30px;
+    background: #abce80;
+}
+.header__wrap{
+    justify-content: space-between;
+    display: flex;
+}
+.header__logo{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 19px;
+    color: #FFFFFF
+}
+.header__menu{
+}
+.header__list{
+    display: flex;
+}
+.header__item:not(:last-of-type){
+    margin-right: 27px;
+}
+.header__link{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.09em;
+    color: #0E0C0C;
+    transition: 0.5s;
+}
+.header__link:hover{
+    color: #FFF;
+}
+.header__item{
+}
+@media (max-width:1280px) {
+
+    .container{
+        width: unset;
+        padding: 0 15px;
+    }
+    .intro{
+        padding-bottom: 130px;
+    }
+    .intro__img{
+        width: 310px;
+        height: 310px;
+    }
+}
+@media (max-width:1024px) {
+    .intro{
+        padding-bottom: 50px;
+    }
+    .intro__wrap{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .intro__block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro__title, .intro__subtitle{
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .header__burger{
+        color: #FFFFFF;
+    }
+    .intro__subtitle{
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 27px;
+    }
+    .intro__title{
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 27px;
+    }
+    .intro__btns{
+        flex-direction: column;
+    }
+    .intro__btn:not(:last-of-type){
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+body{
+    background: black;
+}
+/* search */
+.search {}
+
+.search__block {
+    font-family: 'Ubuntu';
+    margin-right: 30px;
+    border: none;
+    width: 400px;
+    border-radius: 25px;
+    padding: 15px;
+    color: black;
+    transition: all 0.6s ease;
+}
+
+.search__block:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.search__block:focus {
+    outline: none;
+}
+
+.search__engine {
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+    justify-content: center;
+}
+
+.search__engine,
+.search__result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__result,
+.search__btn {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.search__btn:hover {
+    color: #69a6db;
+}
+
+.search__result {
+    flex-direction: column;
+    color: azure;
+}
+
+.search__result__text {
+    margin-bottom: 5px;
+}
+
+.anime__href {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 27px;
+    color: white;
+    transition: 0.4s;
+}
+.anime__href:hover{
+    color: #69a6db;
+}
+
+
+#watch {
+    text-align: center;
+    color: #FFF;
+    font-size: 28px;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-top {
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    margin: 0 auto;
+}
+
+.search-top__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
+    font-size: 12px;
+    font-family: 'Ubuntu';
+}
+
+.currency {
+    color: #fff;
+    font-size: 17px;
+}
+.intro__wrap{
+    padding-top: 126px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.intro__block{}
+.intro__subtitle{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 44px;
+    /* or 183% */
+
+    text-align: justify;
+
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.intro__title{
+    margin-bottom: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    /* identical to box height */
+
+    letter-spacing: 0.09em;
+
+    color: #9BA0FC;
+}
+.intro__btns{
+    margin-top: 45px;
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.09em;
+    color: #0E0C0C;
+}
+.intro__btn:not(:last-of-type){
+    margin-right: 25px;
+}
+.intro__img{
+    width: 472px;
+    height: 472px;
+}
+.intro__img img{
+    height: 100%;
+    object-fit: cover;
+}
+.title{
+    color: #FFFFFF;
+}
+
+.cards{
+    display: flex;
+}
+.card1{
+    height: 621px;
+    width: 183px;
+    background: #FFD280;
+    transition: 0.7s;
+}
+.card2{
+    margin-left: 21px;
+    height: 621px;
+    width: 183px;
+    background: #9BA0FC;
+    transition: 0.7s;
+}
+.card3{
+    margin-left: 21px;
+    height: 621px;
+    width: 183px;
+    background: #8FC7FF;
+    transition: 0.7s;
+}
+.width:hover{
+    width: 405px;
+}
+.block1{
+    background: url(../img/Saly-14.svg) no-repeat center center / cover ;
+    height: 683px;
+    transition: 0.5s;
+    /* width: 183px; */
+}
+.block{
+    width: 100%;
+}
+.block2{
+    background: url(../img/Saly-15.svg) no-repeat center center / cover ;
+    height: 683px;
+    transition: 0.7s;
+    /* width: 183px; */
+}
+.block3{
+    background: url(../img/Saly-16.svg) no-repeat center center / cover ;
+    height: 683px;
+    transition: 0.7s;
+    /* width: 183px; */
+}
+.header__music__button{
+    display: flex;
+    background: none;
+    border: 0;
+    padding-right: 120px;
+    cursor: pointer;
+}

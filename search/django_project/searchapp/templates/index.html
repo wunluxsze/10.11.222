@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <div class="header__logo">
+                    <h3>{{ user.username|default:'Guest' }}</h3>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <div classalign="header__item">
+                            <audio src="{% static 'music/alyss.mp3' %}" id="audio"></audio>
+                            <button type="button" class="header__link header__music__button" onclick="soundClick()">
+                                Music OFF</button>
+                        </div>
+                        <script type="text/javascript">
+                            let isPlaying = false;
+                            let button = document.querySelector('.header__music__button')
+
+                            function soundClick() {
+
+                                var audio = document.getElementById('audio');
+                                if (audio.paused) {
+                                    audio.play();
+                                    button.innerHTML = 'Music ON'
+                                } else {
+                                    audio.pause();
+                                    button.innerHTML = 'Music OFF'
+                                }
+                            }
+                        </script>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Home</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Profile</a>
+                        </li>
+                        <li class="header__item">
+                            {% if user.is_authenticated %}
+                            <a class="header__link" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="header__item">
+                            <a class="header__link" href="{% url 'signup' %}">Registration</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" href="{% url 'login' %}">Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- search -->
+    <div class="intro">
+        <div class="container">
+            <div class="intro__wrap">
+                <div class="intro__block">
+                    <h1 id="text" class="title intro__title">Поисковик</h1>
+                    <h4 class="title intro__subtitle"> ого это супер пупер дупер лучший <br>
+                    мега крутой красивый прекрасный сайт! </h4>
+                    <div class="search">
+                        <div class="search-top">
+                            <div class="search-top__inner">
+                                <div id='watch'></div>
+                                <p class="currency">{{dollar}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{euro}}</p>
+                            </div>
+                        </div>
+                        <form action="" class="search__engine">
+                            {% if user.is_authenticated %}
+                            <input name="q" type="text" placeholder="Enter word..." class="search__block">
+                            {% else %}
+                            <input name="q" type="text" placeholder="Enter word..." disabled class="search__block">
+                            {% endif %}
+                            <input type="submit" id="btn" value="Search" class="search__btn">
+                        </form>
+                    </div>
+                    <div class="search__result">
+                        {% autoescape off %}
+                        {% if not sentences and check %}
+                        <p class="search__result__none">0 результатов поиска</p>
+                        {% else %}
+                        {% for i in sentences %}
+                        <p class="search__result__text">{{ i }}</p>
+                        {% endfor %}
+                        {% endif %}
+                        {% endautoescape %}
+                    </div>
+                    </div>
+                <div class="cards">
+                    <a href='#' onmouseover="color_orange()" class="width card1">
+                        <div class="block block1"></div>
+                    </a>
+                    <a href='#' onmouseover="color_purple()" class=" width card2">
+                        <div class="block block2"></div>
+                    </a>
+                    <a href='#' onmouseover="color_cyan()" class="width card3">
+                        <div class="block block3"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/style.js' %}"></script>
+</body>
+
+</html>
